@@ -1,14 +1,18 @@
 import React from 'react';
-import './App.css';
+import Container from '@material-ui/core/Container';
 import Header from './components/Header';
 import TaskInput from './components/TaskInput';
+import TaskCounter from './components/TaskCounter';
+import TaskListing from './components/TaskListing';
 
 function App() {
   return (
-    <div className="App">
+    <Container maxWidth="md">
       <Header />
       <TaskInput />
-    </div>
+      <TaskCounter />
+      <TaskListing />
+    </Container>
   );
 }
 
