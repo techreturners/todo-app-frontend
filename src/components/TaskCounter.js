@@ -9,12 +9,12 @@ const useStyles = makeStyles(() => ({
     },
 }));
 
-function TaskCounter() {
+function TaskCounter({tasksOutstanding}) {
     const classes = useStyles();
     return (
         <div className={classes.taskCounter}>
             <Typography  variant="h6" gutterBottom>
-                You have 3 tasks to complete!
+                You have {tasksOutstanding} tasks to complete!
             </Typography>
         </div>
     );
