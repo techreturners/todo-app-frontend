@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
@@ -15,15 +15,36 @@ const useStyles = makeStyles(() => ({
 }));
 
 
-function TaskInput() {
+function TaskInput({ addTask }) {
+    const [text, setText] = useState("");
     const classes = useStyles();
+
+    // const handleTextChange = (event) => {
+    //     setText(event.target.value);
+    // }
+
+    const handleAddClick = () => {
+        addTask(text);
+        setText("");
+    }
+
     return (
-        <Grid className={classes.taskInputArea} container spacing={3} justify="center" alignItems="center">
+        <Grid className={classes.taskInputArea} container spacing={3} 
+            justify="center" alignItems="center">
             <Grid item xs={12} md={6} className={classes.column}>
-                <TextField required label="Your task" fullWidth />
+                <TextField 
+                    required 
+                    label="Your task" 
+                    fullWidth 
+                    onChange={ event => setText(event.target.value) } 
+                    value={ text }/>
             </Grid>
             <Grid item xs={12} md={3} className={classes.column}>
-                <Button variant="contained" color="primary" >
+                <Button 
+                    variant="contained" 
+                    color="primary" 
+                    onClick={ handleAddClick }
+                >
                     ADD
                 </Button>
             </Grid>
