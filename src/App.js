@@ -16,16 +16,7 @@ function App() {
     { taskDescription: "Changing state", completed: false}
   ]);
 
-  // const handleClick = () => {
-  //   console.log("The button has been clicked!");
-  // }
-
-  ///Listen to the add task button being clicked
-  //Update the tasks state with a new list of tasks
-
-  const addTask = (text) => {
-    console.log(text);
-
+  const addTask = text => {
     const newTask = {
       taskDescription: text,
       completed: false
@@ -42,7 +33,6 @@ function App() {
       <TaskInput addTask={ addTask }/>
       <TaskCounter tasksOutstanding={tasks.length} />
       <TaskListing taskData={tasks} />
-      {/* <button onClick={ handleClick }>Click me!</button> */}
     </Container>
   );
 }

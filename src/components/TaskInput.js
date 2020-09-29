@@ -19,9 +19,9 @@ function TaskInput({ addTask }) {
     const [text, setText] = useState("");
     const classes = useStyles();
 
-    // const handleTextChange = (event) => {
-    //     setText(event.target.value);
-    // }
+    const handleTextChange = event => {
+        setText(event.target.value);
+    }
 
     const handleAddClick = () => {
         addTask(text);
@@ -36,7 +36,7 @@ function TaskInput({ addTask }) {
                     required 
                     label="Your task" 
                     fullWidth 
-                    onChange={ event => setText(event.target.value) } 
+                    onChange={ handleTextChange } 
                     value={ text }/>
             </Grid>
             <Grid item xs={12} md={3} className={classes.column}>
