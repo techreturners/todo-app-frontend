@@ -1,0 +1,10 @@
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+.svg-inline--fa.fa-w-14.icon--calendar {
+    height: auto;
+    margin-right: 10px;
+    width: 30px;
+}
