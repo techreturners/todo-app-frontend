@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import Container from '@material-ui/core/Container';
-import Header from './components/Header';
-import TaskInput from './components/TaskInput';
-import TaskCounter from './components/TaskCounter';
-import TaskListing from './components/TaskListing';
+import Header from './components/Header/Header';
+import TaskInput from './components/TaskInput/TaskInput';
+import TaskCounter from './components/TaskCounter/TaskCounter';
+import TaskListing from './components/TaskListing/TaskListing';
+
+// import cat from './assets/images/cat.webp';
 
 function App() {
 
@@ -30,6 +32,7 @@ function App() {
   return (
     <Container maxWidth="md">
       <Header />
+      {/* <img className="cat-img" src={ cat } alt="cat"/> */}
       <TaskInput addTask={ addTask }/>
       <TaskCounter tasksOutstanding={tasks.length} />
       <TaskListing taskData={tasks} />
