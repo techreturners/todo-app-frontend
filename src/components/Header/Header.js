@@ -15,7 +15,7 @@ const useStyles = makeStyles(() => ({
 function Header() {
     const classes = useStyles();
     return (
-        <div class="header">
+        <div className="header">
             <FontAwesomeIcon className="icon--calendar" icon={ faCalendarCheck }/>
             <Typography className={classes.header} variant="h3">
                 To Do!

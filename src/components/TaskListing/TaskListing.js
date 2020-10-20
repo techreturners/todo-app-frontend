@@ -13,7 +13,7 @@ function TaskListing({taskData}) {
             <Grid item xs={12} md={6}>
                 <Typography variant="h6">Tasks to do:</Typography>
                 {incompleteTasks.map((task) =>
-                    <Task task={task} />
+                    <Task key={task.taskId} task={task} />
                 )}
             </Grid>
             <Grid item xs={12} md={6}>
